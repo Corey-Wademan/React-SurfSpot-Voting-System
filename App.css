@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  text-align: center;
+  color: #222;
+  font-size: 24px; 
+  font-family: sans-serif;
+  width: 100%;
+  background-image: url('https://i1.wp.com/www.surfer.com/wp-content/uploads/2019/10/tiger_doerner-5511-191028-Ryan_Chachi_Craig.jpg?resize=1920%2C1080&ssl=1');
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  margin: 30px;
+}
+
+.waves {
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  
+}
+.wave h1 {
+  position: fixed;
+  top: auto;
+  color: skyblue;
+
+}
+
+.wave {
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: rgba(255, 235, 205, 0.041);
+  border: 1px solid #222;
+  margin: 2px;
+  height: 400px;
+  width: 400px;
+}
+
+.waveDetails {
+  display: flex;
+  justify-content: space-around;
+}
+
+.voteCount {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  text-align: justify;
+}
+
+button {
+  color: rgb(0, 0, 0);
+  background-image: linear-gradient(red, yellow);
+  border: none;
+  font-size: 30px;
+  outline: none;
+  cursor: pointer;
+  border: slateblue solid 5px;
+  border-radius: 100%;
+  box-shadow: 0px 8px 15px rgb(0, 0, 0);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  
+}
+button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.resetButton {
+
+}
