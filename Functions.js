@@ -1,32 +1,45 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-const backgrounds = []
 
 export class Functions extends React.Component {
+    
+    static initialState = {
+        waves : [
+            {id: 'Pipeline', votes: 0},
+            {id: 'Backdoor', votes: 0},
+            {id: 'Froggies', votes: 0},
+            {id: 'Waimea', votes: 0}
+        ]
+    }
+    
     constructor(props){
         super(props);
+        this.state = Functions.initialState;  
+    }
+    
 
-        this.state = {
+    reset(e) {
+        if (e) e.preventDefault();
+           this.setState({
             waves : [
                 {id: 'Pipeline', votes: 0},
                 {id: 'Backdoor', votes: 0},
                 {id: 'Froggies', votes: 0},
                 {id: 'Waimea', votes: 0}
             ]
-        }
-    }
+        });
+      
 
-       reset() {
-           this.setState({votes: 0})
-       }
         
     
-       add (i) {
+    }
+    
+    add (i) {
             let oldWaves = [...this.state.waves]
             oldWaves[i].votes++
             this.setState({waves: oldWaves})
-    }
+        }   
     
     render() {
     return (
@@ -44,7 +57,7 @@ export class Functions extends React.Component {
                     
                 </div>
             )}
-            <button onClick={this.reset.bind(this)} className='resetButton'>Reset</button>
+            <button onClick={this.reset.bind(this)} className='resetButton'>Reset  </button> 
         </div>
     )
     }
