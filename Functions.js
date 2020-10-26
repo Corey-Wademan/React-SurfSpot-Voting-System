@@ -21,25 +21,16 @@ export class Functions extends React.Component {
 
     reset(e) {
         if (e) e.preventDefault();
-           this.setState({
-            waves : [
-                {id: 'Pipeline', votes: 0},
-                {id: 'Backdoor', votes: 0},
-                {id: 'Froggies', votes: 0},
-                {id: 'Waimea', votes: 0}
-            ]
-        });
-      
-
-        
-    
+        this.setState(Functions.initialState);
     }
     
+
     add (i) {
-            let oldWaves = [...this.state.waves]
-            oldWaves[i].votes++
-            this.setState({waves: oldWaves})
-        }   
+        const oldWaves = [...this.state.waves];
+        const wave = oldWaves[i];
+        oldWaves[i] = { ...wave, votes: wave.votes + 1 };
+        this.setState({waves: oldWaves})
+      }
     
     render() {
     return (
