@@ -32,6 +32,7 @@ h1 {
   position: fixed;
   top: auto;
   color: skyblue;
+  margin: 10px;
 
 }
 
@@ -42,24 +43,19 @@ h1 {
   align-items: center;
   padding: 10px 40px;
   background-color: rgba(255, 235, 205, 0.041);
-  border: 1px solid #222;
-  margin: 2px;
+  border: 1px solid rgb(214, 211, 25);
+  border-radius: 6px;
+  margin: 20px;
   height: 400px;
   width: 400px;
 }
 
 .waveDetails {
   display: flex;
+  width: 100%;
   justify-content: space-around;
-}
-
-.voteCount {
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 5px;
-  text-align: justify;
+  text-align: center;
 }
 
 button {
@@ -75,15 +71,11 @@ button {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  
+  margin: 5px;
 }
 button:hover {
-  background-color: #2EE59D;
+  background-color: #57bfda;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
-  transform: translateY(-7px);
-}
-
-.resetButton {
-
+  transform: translateY(-17px);
 }
